@@ -22,4 +22,6 @@
 ## find highest salary in each department
     => select max(salary), department_number from employee group by department_number;
    
-##
+## Print Second highest Salary
+    => Select Max(Salary) from employee where salary not in(Select Max(Salary) from employee)
+    => Select name, Max(Salary) from employee where salary<(Select Max(Salary) from employee)
